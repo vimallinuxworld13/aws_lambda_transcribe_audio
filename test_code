@@ -1,12 +1,19 @@
+import json
+
 def my(e,c):
     print(e)
     print(e['body'])
+    data = json.loads(e['body'])
+    
     return {
         "statusCode": 200,
-        "body": e['body'],
+        "body": data['name'],
         "headers": {
             "Content-Type": "application/json"
         }
 
     }
     
+    
+    send in Request Body for test:
+    {"name": "vimal"}
