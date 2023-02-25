@@ -1,0 +1,12 @@
+def my(e,c):
+    print(e)
+    print(e['body'])
+    return {
+        "statusCode": 200,
+        "body": e['body'],
+        "headers": {
+            "Content-Type": "application/json"
+        }
+
+    }
+    
