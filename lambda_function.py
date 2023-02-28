@@ -28,5 +28,6 @@ def lambda_handler(event, context):
     print (json.dumps(response, default=str))
     
     return {
+        'statusCode': 200,
         'TranscriptionJobName': response['TranscriptionJob']['TranscriptionJobName']
     }
